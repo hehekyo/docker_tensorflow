@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  tensorflow:
+    build: .
+    image: tensorflow/tensorflow:latest-py3-jupyter
+    container_name: docker_tensorflow_hello
+    volumes:
+      #- C:\Users\q.yu\Documents\Dev\docker\docker_tensorflow:/tf/notebooks:rw
+      - C:\Users\q.yu\Documents\Dev\PycharmProjects\docker_tensorflow\notebook:/tf/notebooks:rw
+
+    ports:
+      - "8888:8888"
+      - "6006:6006"
